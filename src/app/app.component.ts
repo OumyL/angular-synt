@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [
+    RouterLink,
+    RouterOutlet
+  ],
+  standalone: true
 })
 export class AppComponent {
-  title = 'enset-app';
+  email: string="ouma@gmail.com";
 }
